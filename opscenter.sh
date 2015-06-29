@@ -10,7 +10,7 @@
 #  7 - v: Sets the DSE Version
 #  8 - U: Datastax username
 #  9 - P: Datastax password
-#  10 - h  Help 
+#  10 - h  Help
 # Note: This script has only been tested on Ubuntu 12.04 LTS and must be root
 
 help()
@@ -82,25 +82,25 @@ while getopts :n:d:u:p:j:v:U:P:k:e optname; do
       #Static dicovery endpoints
       DSE_ENDPOINTS=${OPTARG}
       ;;
-    k) 
+    k)
       # OpsCenter Admin Password
       OPS_CENTER_ADMIN_PASS=${OPTARG}
       ;;
-    v) 
+    v)
       # DSE Version
       DSE_VERSION=${OPTARG}
       ;;
-    U) 
+    U)
       DSE_USERNAME=${OPTARG}
       ;;
-    P) 
+    P)
       DSE_PASSWORD=${OPTARG}
       ;;
-    e) 
+    e)
       #place data on local resource disk
       EPHEMERAL=1
       ;;
-    h) 
+    h)
       #show help
       help
       exit 2
@@ -116,11 +116,11 @@ done
 
 # Install Java
 add-apt-repository -y ppa:webupd8team/java
-apt-get -y update 
+apt-get -y update
 echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections
 echo debconf shared/accepted-oracle-license-v1-1 seen true | sudo debconf-set-selections
-apt-get -y install oracle-java8-installer
- 
+apt-get -y install oracle-java7-installer
+
 # Install OpsCenter
 echo "deb http://debian.datastax.com/community stable main" | sudo tee -a /etc/apt/sources.list.d/datastax.community.list
 curl -L http://debian.datastax.com/debian/repo_key | sudo apt-key add -
@@ -271,4 +271,3 @@ curl -k -H "opscenter-session: $AUTH_SESSION" -H "Accept: application/json" -d "
 # Note - this exits before the OpsCenter curl operations complete.
 
 exit 0
-

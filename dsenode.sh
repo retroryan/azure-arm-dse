@@ -22,7 +22,7 @@ fi
 
 # Install Java
 add-apt-repository -y ppa:webupd8team/java
-apt-get -y update 
+apt-get -y update
 echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections
 echo debconf shared/accepted-oracle-license-v1-1 seen true | sudo debconf-set-selections
 apt-get -y install oracle-java8-installer
@@ -30,4 +30,3 @@ apt-get -y install oracle-java8-installer
 # Need to see if we can find a better solution
 chmod 777 /mnt
 chmod 777 /datadisks
-

@@ -1,6 +1,6 @@
 # Deploy a DataStax Enterprise Cluster to Azure
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FDSPN%2Fazure-arm-dse%2Fmaster%2Fazuredeploy.json" target="_blank">
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fretroryan%2Fazure-arm-dse%2Fmaster%2Fazuredeploy.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
 
@@ -35,4 +35,3 @@ The OpsCenter virtual machine has port 22 for SSH, port 8888 for HTTP and port 8
 - There are various validations (is there a name conflict, is a password of sufficient strength, is a username valid) that are performed on the backend but not in the web UI.  Ideally this would happen in the web UI.
 - Cannot provision more than 251 cluster nodes as the nodes are named 10.0.0.5, 10.0.0.6, ...
 - There is a for loop in opscenter.sh which does not scale well with large numbers of nodes.
-
