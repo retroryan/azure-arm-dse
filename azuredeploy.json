@@ -16,7 +16,7 @@
         "East US",
         "East Asia",
         "Southeast Asia",
-        "West Europe"
+        "North Central US"
       ],
       "metadata": {
         "description": "Region where the Azure artifacts will be created"
@@ -46,7 +46,9 @@
         "Standard_G2",
         "Standard_G3",
         "Standard_G4",
-        "Standard_G5"
+        "Standard_G5",
+        "Standard_D3",
+        "Standard_D4"
       ],
       "metadata": {
         "description": "The size of virtual machine to provision for each cluster node"
