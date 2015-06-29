@@ -16,7 +16,7 @@
         "East US",
         "East Asia",
         "Southeast Asia",
-        "North Central US"
+        "Central US"
       ],
       "metadata": {
         "description": "Region where the Azure artifacts will be created"
